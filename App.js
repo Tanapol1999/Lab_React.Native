@@ -3,17 +3,20 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  // const doIt () =>{
-  //   console.log("Hello From Console")
-  // }
+  //function doIt
+  const doIt = () => {
+    console.log("Hello From Console")
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
+      <Text onPress={doIt}>Hello World</Text>
+        <StatusBar style="auto" />
     </View>
   );
 }
 
+//css
 const styles = StyleSheet.create({
   container: {
     flex: 1,
