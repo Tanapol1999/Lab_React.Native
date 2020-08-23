@@ -9,6 +9,9 @@ export default function Forecast(props) {
             <Text style={styles.mainText}>{props.main} </Text>
             <Text style={styles.descriptionText}>{props.description}</Text>
             <Text style={styles.tempText}>{props.temp} °C</Text>
+            <Text style={styles.maxminText}>Max Temperature: {props.maxtemp}°C</Text>
+            <Text style={styles.maxminText}>Min Temperature: {props.mintemp}°C</Text>
+            <Text style={styles.humidityText}>Humidity: {props.humidity}</Text>
         </View>
     )
 }
@@ -38,6 +41,16 @@ const styles = StyleSheet.create ({
         color: 'white',
         textAlign: 'center',
         fontSize: 30,
+    },
+    maxminText: {
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 20,
+    },
+    humidityText: {
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 20
     },
     celsiusText: {
         fontSize: 15,

@@ -19,6 +19,9 @@ export default function Weather(props) {
                     description: json.weather[0].description,
                     temp: json.main.temp,
                     name: json.name,
+                    humidity: json.main.humidity,
+                    maxtemp: json.main.temp_max,
+                    mintemp: json.main.temp_min
                 });
                 })
             .catch((error) => {
@@ -57,6 +60,6 @@ const styles = StyleSheet.create({
         top: 0,
         opacity: 0.60,
         width: '100%',
-        height: '45%'
+        height: '60%'
     }
 })
