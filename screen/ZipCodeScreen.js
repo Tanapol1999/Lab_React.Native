@@ -44,16 +44,16 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
 
-    zipPlace: {
-        flex: 1,
-    },
+    // zipPlace: {
+    //     flex: 1,
+    // },
 
-    zipCode: {
-        flex: 1,
-    },
+    // zipCode: {
+    //     flex: 1,
+    // },
 
     backpic: {
-        height: 100,
+        height: 150,
         width: 420,
         padding: 20,
         justifyContent: 'center',
@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: 'white',
         fontWeight: "bold",
-        fontFamily: "Comic Sans MS",
         backgroundColor: 'black',
         opacity: 0.60
     },
@@ -73,7 +72,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: 'white',
         fontWeight: "bold",
-        //fontFamily: "Comic Sans MS",
         backgroundColor: 'black',
         opacity: 0.60
     }

@@ -1,17 +1,26 @@
   
 import React from 'react'
-import { View, Text , StyleSheet } from 'react-native'
+import { View, Text , StyleSheet, ImageBackground  } from 'react-native'
 
 export default function Forecast(props) {
+
+    let img = ""
+    switch(props.main){
+        case 'Rain' : img=require('../picture/Rainy.jpg')
+            break;
+        case 'Clouds': img = require('../picture/Clouds.jpg')
+            break;
+    }
+
     return (
         <View>
-            <Text style={styles.nameText}>{props.name}</Text>
-            <Text style={styles.mainText}>{props.main} </Text>
-            <Text style={styles.descriptionText}>{props.description}</Text>
-            <Text style={styles.tempText}>{props.temp} °C</Text>
-            <Text style={styles.maxminText}>Max Temperature: {props.maxtemp}°C</Text>
-            <Text style={styles.maxminText}>Min Temperature: {props.mintemp}°C</Text>
-            <Text style={styles.humidityText}>Humidity: {props.humidity}</Text>
+                <Text style={styles.nameText}>{props.name}</Text>
+                <Text style={styles.mainText}>{props.main} </Text>
+                <Text style={styles.descriptionText}>{props.description}</Text>
+                <Text style={styles.tempText}>{props.temp} °C</Text>
+                <Text style={styles.maxminText}>Max Temperature: {props.maxtemp}°C</Text>
+                <Text style={styles.maxminText}>Min Temperature: {props.mintemp}°C</Text>
+                <Text style={styles.humidityText}>Humidity: {props.humidity}%</Text>
         </View>
     )
 }
