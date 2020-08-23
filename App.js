@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Weather from './Component/Weather';
+import Constants from 'expo-constants';
 
 export default function App() {
   //function doIt
@@ -10,7 +12,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text onPress={doIt}>Hello World</Text>
+      <Weather zipCode="90110"/>
         <StatusBar style="auto" />
     </View>
   );
@@ -19,9 +21,10 @@ export default function App() {
 //css
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 25,
+    // flex: 1,
+    // backgroundColor: '#fff',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
 });
