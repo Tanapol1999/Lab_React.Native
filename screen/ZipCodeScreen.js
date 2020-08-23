@@ -4,14 +4,14 @@ import { TouchableHighlight } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native'
 
 const availableZipItems = [
-    { place: 'Hatyai', code: '90110', src:require('../picture/HDY.jpg') },
-    { place: 'Trang', code: '92000', src:require('../picture/TRG.jpg')},
-    { place: 'Chiangmai', code: '50000', src:require('../picture/CNX.jpg') },
-    { place: 'Khonkaen', code: '40000', src:require('../picture/KKN.jpg') },
-    { place: 'Chonburi', code: '20000', src:require('../picture/CHB.jpg') },
-    { place: 'Phang Nha', code: '82170', src:require('../picture/PHN.jpg') },
-    { place: 'Bangkok', code: '10150', src:require('../picture/BKK.jpg') },
-    { place: 'Phuket', code: '83120', src:require('../picture/PHK.jpg') },
+    { place: 'HATYAI', code: '90110', src:require('../picture/HDY.jpg') },
+    { place: 'TRANG', code: '92000', src:require('../picture/TRG.jpg')},
+    { place: 'CHIANG MAI', code: '50000', src:require('../picture/CNX.jpg') },
+    { place: 'KHONKANE', code: '40000', src:require('../picture/KKN.jpg') },
+    { place: 'CHONBURI', code: '20000', src:require('../picture/CHB.jpg') },
+    { place: 'PHANG NHA', code: '82170', src:require('../picture/PHN.jpg') },
+    { place: 'BANGKOK', code: '10150', src:require('../picture/BKK.jpg') },
+    { place: 'PHUKET', code: '83120', src:require('../picture/PHK.jpg') },
 ]
 
 const ZipItem = ({place, code, navigation, src}) => (

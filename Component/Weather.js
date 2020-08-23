@@ -21,7 +21,8 @@ export default function Weather(props) {
                     name: json.name,
                     humidity: json.main.humidity,
                     maxtemp: json.main.temp_max,
-                    mintemp: json.main.temp_min
+                    mintemp: json.main.temp_min,
+                    pressure: json.main.pressure
                 });
                 })
             .catch((error) => {
@@ -32,13 +33,11 @@ export default function Weather(props) {
     return (
         <ImageBackground source={require('../picture/weather.png')} style={styles.backdrop}>
             <View style={styles.background}>
-                <Text style={styles.zipCodeText}>Zip code is {props.zipCode}</Text>
                 <Forecast {...forecastInfo}/>
             </View>
         </ImageBackground>
     )
 }
-
 
 const styles = StyleSheet.create({
     backdrop: {
