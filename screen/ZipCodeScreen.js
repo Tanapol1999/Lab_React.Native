@@ -13,7 +13,7 @@ const availableZipItems = [
     { place: 'BANGKOK', code: '10150', src:require('../picture/BKK.jpg') },
     { place: 'PHUKET', code: '83120', src:require('../picture/PHK.jpg') },
 ]
-
+ 
 const ZipItem = ({place, code, navigation, src}) => (
     <TouchableHighlight onPress={() => (
         navigation.navigate('Weather', {zipCode: code})
@@ -43,14 +43,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
-
-    // zipPlace: {
-    //     flex: 1,
-    // },
-
-    // zipCode: {
-    //     flex: 1,
-    // },
 
     backpic: {
         height: 150,

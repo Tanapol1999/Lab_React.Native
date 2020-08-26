@@ -4,16 +4,32 @@ import { View, Text , StyleSheet, ImageBackground  } from 'react-native'
 
 export default function Forecast(props) {
 
-    let img = ""
-    switch(props.main){
-        case 'Rain': img=require('../picture/Rainy.jpg')
-            break;
-        case 'Clouds': img = require('../picture/Clouds.jpg')
-            break;
+    let img = " "
+    if(props.main == 'Rain'){
+        console.log("Rain Weather");
+        img = require('../picture/Rainy.jpg');
+    }
+    else if(props.main == 'Clouds'){
+        console.log("Clouds Weather");
+        img = require('../picture/Clouds.jpg');
+    }else if(props.main == 'Clear'){
+        console.log("Clear Weather");
+        img = require('../picture/Clear.jpg');
+    }else if(props.main == 'Sunny'){
+        console.log("Sunny Weather");
+        img = require('../picture/Sunny.jpg');
+    }else if(props.main == 'Thunderstorm'){
+        console.log("Thunderstorm Weather");
+        img = require('../picture/Thunderstorm.jpg');
+    }else{
+        console.log("What?");
+        img = require('../picture/weather.png');
     }
 
     return (
-        <View>
+        <ImageBackground source = {img} style = {styles.backdrop}>
+            <View style = {styles.viewstyle}>
+            <View>
                 <Text style={styles.nameText}>{props.name}</Text>
                 <Text style={styles.tempText}>{props.temp} °C</Text>
                 <Text style={styles.mainText}>{props.main} </Text>
@@ -22,7 +38,10 @@ export default function Forecast(props) {
                 <Text style={styles.maxminText}>Min Temperature: {props.mintemp}°C</Text>
                 <Text style={styles.maxminText}>Pressure: {props.pressure} N/m²</Text>
                 <Text style={styles.humidityText}>Humidity: {props.humidity}%</Text>
-        </View>
+             </View>
+          </View>
+        </ImageBackground>
+      
     )
 }
 
@@ -65,6 +84,18 @@ const styles = StyleSheet.create ({
         color: 'white',
         textAlign: 'center',
         fontSize: 20
-    }
-
+    },
+    backdrop: {
+        alignItems : 'center',
+        width : '100%' ,
+        height : '100%',
+    },
+    viewstyle: {
+        width: 400, 
+        height: '94%', 
+        backgroundColor: 'black',
+        opacity : 0.60,
+        top: 20,
+    },
+    
 })
